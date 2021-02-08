@@ -4,13 +4,21 @@ import "testing"
 
 func Test162(t *testing.T) {
 	var (
-		nums    = []int{1, 2, 1, 3, 5, 6, 4}
-		result1 = 1
-		result2 = 5
+		nums1    = []int{1, 2, 1, 3, 5, 6, 4}
+		result11 = 1
+		result12 = 5
 	)
-	r := findPeakElement(nums)
-	if r != result1 && r != result2 {
-		t.Fatal(r, "!=", result1, "and !=", result2)
+	if r := findPeakElement(nums1); r != result11 && r != result12 {
+		t.Fatal(r, "!=", result11, "and !=", result12)
 	}
-	t.Log("成功")
+	t.Log("示例 1 成功")
+
+	var (
+		nums2   = []int{1, 2}
+		result2 = 1
+	)
+	if r := findPeakElement(nums2); r != result2 {
+		t.Fatal(r, "!=", result2)
+	}
+	t.Log("示例 2 成功")
 }
