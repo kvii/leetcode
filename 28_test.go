@@ -5,9 +5,8 @@ import "testing"
 func Test28(t *testing.T) {
 	var fn = func(a, b string, ans int) {
 		if i := strStr(a, b); i != ans {
-			t.Fatal("失败", i)
+			t.Fatal(i)
 		}
-		t.Log("成功")
 	}
 
 	fn("", "", 0)

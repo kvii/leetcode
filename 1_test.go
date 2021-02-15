@@ -12,8 +12,7 @@ func Test1(t *testing.T) {
 	)
 	arr := twoSum(nums, target)
 
-	if res := intSlice(arr, result); res != nil {
-		t.Fatal(res)
+	if err := intSlice(arr, result); err != nil {
+		t.Fatal(err)
 	}
-	t.Log("成功")
 }

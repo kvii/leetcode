@@ -11,7 +11,6 @@ func Test162(t *testing.T) {
 	if r := findPeakElement(nums1); r != result11 && r != result12 {
 		t.Fatal(r, "!=", result11, "and !=", result12)
 	}
-	t.Log("示例 1 成功")
 
 	var (
 		nums2   = []int{1, 2}
@@ -20,5 +19,4 @@ func Test162(t *testing.T) {
 	if r := findPeakElement(nums2); r != result2 {
 		t.Fatal(r, "!=", result2)
 	}
-	t.Log("示例 2 成功")
 }
