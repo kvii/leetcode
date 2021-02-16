@@ -1,16 +1,23 @@
 package leetcode
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
 
 func Test28(t *testing.T) {
-	var fn = func(a, b string, ans int) {
-		if i := strStr(a, b); i != ans {
-			t.Fatal(i)
-		}
+	data := []struct {
+		a, b string
+		ans  int
+	}{
+		{"", "", 0},
+		{"hello", "ll", 2},
+		{"golang", "ll", -1},
+		{"abc", "c", 2},
 	}
 
-	fn("", "", 0)
-	fn("hello", "ll", 2)
-	fn("golang", "ll", -1)
-	fn("abc", "c", 2)
+	for _, v := range data {
+		assert.Equal(t, strStr(v.a, v.b), v.ans)
+	}
 }
