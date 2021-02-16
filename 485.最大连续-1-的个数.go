@@ -51,27 +51,4 @@ func findMaxCrossingSubarray(A []int, low, mid, high int) (count int) {
 	return
 }
 
-func findMaxSubarray2(A []int) (ans int) {
-
-	for i := 0; i < len(A); i++ {
-		if A[i] == 0 {
-			continue
-		}
-
-		var j, count int
-		for j = i; j < len(A); j++ {
-			if A[j] == 0 {
-				break
-			}
-			count++
-		}
-
-		if count > ans {
-			ans = count
-		}
-		i = j
-	}
-	return
-}
-
 // @lc code=end

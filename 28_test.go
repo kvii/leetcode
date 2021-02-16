@@ -7,7 +7,7 @@ import (
 )
 
 func Test28(t *testing.T) {
-	data := []struct {
+	var data = []struct {
 		a, b string
 		ans  int
 	}{
