@@ -18,6 +18,14 @@ func Test162(t *testing.T) {
 			nums: []int{1, 2},
 			ans:  []int{1},
 		},
+		{
+			nums: []int{1},
+			ans:  []int{0},
+		},
+		{
+			nums: []int{2, 1},
+			ans:  []int{0},
+		},
 	}
 
 	for _, v := range data {
