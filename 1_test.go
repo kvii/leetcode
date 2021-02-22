@@ -27,6 +27,11 @@ func Test1(t *testing.T) {
 			target: 6,
 			ans:    []int{0, 1},
 		},
+		{
+			nums:   []int{3, 3},
+			target: 7,
+			ans:    nil,
+		},
 	}
 
 	for _, v := range data {
